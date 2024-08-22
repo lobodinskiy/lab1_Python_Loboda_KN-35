@@ -5,6 +5,9 @@ if N <= 1 or N >= 9:
     print("N має бути в межах від 2 до 8!")
 else:
     for i in range(1, N + 1):
-        for j in range(i, N + 1):
+        # Друкуємо пробіли перед числами
+        print("  " * (N - i), end="")
+        # Друкуємо числа в зворотному порядку
+        for j in range(N, N - i, -1):
             print(j, end=" ")
         print()
